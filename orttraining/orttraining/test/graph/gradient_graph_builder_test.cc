@@ -180,7 +180,7 @@ TEST(GradientGraphBuilderTest, TrainingSession_Basic) {
   RunTrainingSessionWithChecks(so, backprop_model_file);
 }
 
-TEST(GradientGraphBuilderTest, TrainingSession_WithGist) {
+TEST(GradientGraphBuilderTest, DISABLED_TrainingSession_WithGist) {
   auto config = MakeBasicTrainingConfig();
   config.gist_config = TrainingSession::TrainingConfiguration::GistConfiguration{};
   PathString backprop_model_file;
@@ -1212,7 +1212,7 @@ void OverwritePipelineRank(const TrainingSession::TrainingConfiguration& config,
   mp_group.rank_in_group = pipeline_rank;
 }
 
-TEST(GradientGraphBuilderTest, PipelineOnlinePartition_bert_tiny) {
+TEST(GradientGraphBuilderTest, DISABLED_PipelineOnlinePartition_bert_tiny) {
   const auto model_path = ORT_TSTR("testdata/bert_toy_optimized.onnx");
 
   const size_t total_partition_count = 3;
@@ -1314,7 +1314,7 @@ TEST(GradientGraphBuilderTest, PipelineOnlinePartition_bert_tiny) {
   }
 }
 
-TEST(GradientGraphBuilderTest, PipelineOnlinePartition_MLP) {
+TEST(GradientGraphBuilderTest, DISABLED_PipelineOnlinePartition_MLP) {
   auto model_uri = ORIGINAL_MODEL_PATH;
 
   TrainingSession::TrainingConfiguration::PipelineConfiguration pipe{};

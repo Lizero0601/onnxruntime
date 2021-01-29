@@ -11,7 +11,7 @@
 #include "orttraining/core/session/training_session.h"
 #include "orttraining/core/graph/optimizer_config.h"
 
-#include "orttraining/core/framework/mpi_context.h"
+#include "orttraining/core/framework/communication/mpi/mpi_context.h"
 #include "orttraining/core/framework/module_gradient_graph_builder.h"
 
 #include "python/onnxruntime_pybind_mlvalue.h"
@@ -25,7 +25,7 @@ using namespace onnxruntime::training;
 
 struct TrainingParameters {
   std::string model_with_loss_function_path;
-  std::string model_with_training_graph_path;
+  // std::string model_with_training_graph_path;
 
   std::string loss_output_name;
   std::unordered_set<std::string> weights_to_train;

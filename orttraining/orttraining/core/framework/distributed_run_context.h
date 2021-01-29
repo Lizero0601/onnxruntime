@@ -22,7 +22,8 @@ enum WorkerGroupType {
   HorizontalParallel = 4,
   // The view of pipeline model parallel workers
   PipelineParallel = 5,
-  WorkerGroupTypeCount = 6,
+  ModelParallel = 6,
+  WorkerGroupTypeCount = 7,
 };
 
 struct WorkerGroup {

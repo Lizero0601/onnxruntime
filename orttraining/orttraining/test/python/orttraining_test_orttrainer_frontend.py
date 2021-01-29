@@ -88,6 +88,7 @@ def testORTTrainerOptionsDefaultValues(test_input):
             'deterministic_compute': False,
             'check_model_export': False,
             'graph_save_paths' : {
+                'model_with_loss_function_path': '',
                 'model_after_graph_transforms_path': '',
                 'model_with_gradient_graph_path': '',
                 'model_with_training_graph_path': '',
@@ -809,6 +810,7 @@ def testORTTrainerGradientAccumulation(seed, device, gradient_accumulation_steps
     _test_helpers.assert_model_outputs(expected_loss, actual_loss, rtol=rtol)
 
 
+# @pytest.mark.skip(reason="TODO: FIX before merging into master")
 @pytest.mark.parametrize("dynamic_axes", [
     (True),
     (False),
